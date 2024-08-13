@@ -9,9 +9,9 @@ AUDIO_DIR="${BASE_DIR}/Audio"
 VIDEO_DIR="${BASE_DIR}/Video"
 PEMFILES_DIR="${BASE_DIR}/PemFiles"
 APPLICATIONS_DIR="${BASE_DIR}/Applications"
-
+IMAGE_DIR="${BASE_DIR}/Images"
 # Creating directories if they don't exist
-mkdir -p "$DOCUMENTS_DIR" "$AUDIO_DIR" "$VIDEO_DIR" "$PEMFILES_DIR" "$APPLICATIONS_DIR"
+mkdir -p "$DOCUMENTS_DIR" "$AUDIO_DIR" "$VIDEO_DIR" "$PEMFILES_DIR" "$APPLICATIONS_DIR" "$IMAGE_DIR"
 
 # Associating extensions with directories
 declare -A FILE_TYPES
@@ -21,6 +21,7 @@ FILE_TYPES=(
     ["Video"]="mp4 mkv avi mov wmv flv mpeg webm 3gp m4v"
     ["PemFiles"]="pem cer crt der key"
     ["Applications"]="exe msi dmg apk deb rpm jar bat sh iso"
+    ["Images"]="jpg jpeg heic gif png"
 )
 
 # Today's date
@@ -47,6 +48,9 @@ for file in "${BASE_DIR}"/*; do
                         ;;
                     "Applications")
                         mv "$file" "$APPLICATIONS_DIR/"
+                        ;;
+                    "Applications")
+                        mv "$file" "$IMAGE_DIR/"
                         ;;
                 esac
                 break
