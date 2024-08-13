@@ -5,19 +5,40 @@
 
 CONFIG_FILE="$HOME/.file_organizer_config"
 
-# Function to prompt user for base directory
+# Function to prompt user for a valid base directory
 prompt_for_base_dir() {
-    read -p "Enter the base directory for organizing files (e.g., /Users/viralkamani/Downloads): " base_dir
-    echo "$base_dir" > "$CONFIG_FILE"
+    while true; do
+        read -p "Enter the base directory for organizing files (e.g., /Users/Uname/Downloads): " base_dir
+        if [ -d "$base_dir" ]; then
+            echo "$base_dir" > "$CONFIG_FILE"
+            echo "Directory is valid: $base_dir"
+            break
+        else
+            echo "Directory does not exist or is invalid. Please try again."
+        fi
+    done
 }
 
-# Check if the script was provided with an argument
-if [ "$#" -gt 0 ]; then
-    BASE_DIR="$1"
-    echo "$BASE_DIR" > "$CONFIG_FILE"  # Save the provided path to the config file
+# Check if the script was provided with a --dir argument
+if [[ "$1" == "--dir" ]] && [[ -n "$2" ]]; then
+    if [ -d "$2" ]; then
+        BASE_DIR="$2"
+        echo "$BASE_DIR" > "$CONFIG_FILE"  # Save the provided path to the config file
+        echo "Directory is valid: $BASE_DIR"
+    else
+        echo "Provided directory does not exist or is invalid: $2"
+        exit 1
+    fi
 elif [ -f "$CONFIG_FILE" ]; then
     # Read base directory from configuration file if no argument was provided
     BASE_DIR=$(cat "$CONFIG_FILE")
+    if [ ! -d "$BASE_DIR" ]; then
+        echo "Saved directory does not exist or is invalid: $BASE_DIR"
+        prompt_for_base_dir
+        BASE_DIR=$(cat "$CONFIG_FILE")
+    else
+        echo "Using saved valid directory: $BASE_DIR"
+    fi
 else
     # Prompt user for base directory if this is the first run
     prompt_for_base_dir
