@@ -14,9 +14,11 @@ This directory contains shell scripts that I’ve developed for learning and pra
   
 - **`task2.sh`**: Monitors a specified service (provided as the first argument) and sends an email (provided as the second argument) if the service fails or is stopped. The script will automatically restart the service and notify via email.
   
-- **`task3.1.sh`**: Manages directories using associative arrays (dictionaries) for organizing files into various categories.
+- **`task3.1.sh`**: Manages directories by organizing files into various categories without using associative arrays (dictionaries).
+
+- **`task3.1.sh`**: Same as task3.1 but with path validation and solved move overriding.
   
-- **`task3.sh`**: Manages directories by organizing files into various categories without using associative arrays (dictionaries).
+- **`task3.sh`**: Manages directories using associative arrays (dictionaries) for organizing files into various categories.
 
 ## Usage
 
