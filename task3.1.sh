@@ -1,6 +1,9 @@
 #!/bin/bash
-
+#
+# Task 3 : File Organizing using Cronjob and shell script to specific directory without using dictionary dataset
+#
 # Directories to be created within Downloads
+
 BASE_DIR="/Users/viralkamani/Downloads"
 DOCUMENTS_DIR="${BASE_DIR}/Documents"
 AUDIO_DIR="${BASE_DIR}/Audio"
