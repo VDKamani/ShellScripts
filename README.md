@@ -8,7 +8,7 @@ This directory contains shell scripts that I’ve developed for learning and pra
 
 ## Directory Structure
 
--**`inatall_command.sh`**: This will be used to set the script as command so that we can directly use the script system wide without needing or considering path of the script once it installed.
+- **`inatall_command.sh`**: This will be used to set the script as command so that we can directly use the script system wide without needing or considering path of the script once it installed.
 
 - **`usercreate_with_pemfile`**: Creates a PEM file for a specified user if it does not already exist. The script will ensure the directory is created if it doesn't exist and handle file creation accordingly.
   
@@ -22,7 +22,7 @@ This directory contains shell scripts that I’ve developed for learning and pra
   
 - **`file_organizing_using_arrey`**: Manages directories using associative arrays (dictionaries) for organizing files into various categories.
 
--**`Backup_Directory`**: Script to Backup single directory .File backup Task - if a new file is added, then only the script runs.
+- **`Backup_Directory`**: Script to Backup single directory .File backup Task - if a new file is added, then only the script runs.
 
 ## Usage
 
