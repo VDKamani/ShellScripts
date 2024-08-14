@@ -4,7 +4,7 @@
 #
 # Directories to be created within Downloads
 
-BASE_DIR="/Users/viralkamani/Downloads"
+BASE_DIR="/Users/uname/Downloads" #edit you path before running
 DOCUMENTS_DIR="${BASE_DIR}/Documents"
 AUDIO_DIR="${BASE_DIR}/Audio"
 VIDEO_DIR="${BASE_DIR}/Video"
