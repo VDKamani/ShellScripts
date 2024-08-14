@@ -8,6 +8,8 @@ This directory contains shell scripts that I’ve developed for learning and pra
 
 ## Directory Structure
 
+-**`inatall_command.sh`**: This will be used to set the script as command so that we can directly use the script system wide without needing or considering path of the script once it installed.
+
 - **`task1-2.sh`**: Creates a PEM file for a specified user if it does not already exist. The script will ensure the directory is created if it doesn't exist and handle file creation accordingly.
   
 - **`task1.sh`**: Executes a series of 10 predefined commands sequentially without using if-else statements directly.
@@ -16,7 +18,7 @@ This directory contains shell scripts that I’ve developed for learning and pra
   
 - **`task3.1.sh`**: Manages directories by organizing files into various categories without using associative arrays (dictionaries).
 
-- **`task3.1.sh`**: Same as task3.1 but with path validation and solved move overriding.
+- **`task3.2.sh`**: Same as task3.1 but with path validation and solved move overriding.
   
 - **`task3.sh`**: Manages directories using associative arrays (dictionaries) for organizing files into various categories.
 
