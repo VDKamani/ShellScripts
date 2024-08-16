@@ -24,6 +24,10 @@ This directory contains shell scripts that I’ve developed for learning and pra
 
 - **`Backup_Directory`**: Script to Backup single directory .File backup Task - if a new file is added, then only the script runs.
 
+- **`dyanamic_swap_creation`**: Script to create a swap memory with the size allocation via user also changing the swapiness value and catch-pressure value as well.
+
+- **`swap_deletion`**: Script to delete the swap that we created and also change the swapiness and catch pressure to defaulte value.
+
 ## Usage
 
 To use these scripts, follow these steps:
