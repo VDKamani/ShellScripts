@@ -30,6 +30,10 @@ This directory contains shell scripts that I’ve developed for learning and pra
 
 - **`attach_ebs.sh`**: Make an Amazon EBS volume available for use
 
+- **`attach_ebs_dynamic.sh`**: This script is designed to make an Amazon EBS (Elastic Block Store) volume available for use on an EC2 instance. It provides the flexibility to either directly mount the volume without formatting (useful if the volume already contains a file system and data) or format the volume before mounting. Additionally, the script allows users to make the mount permanent by adding the necessary configuration to /etc/fstab.
+
+- **`detache_ebs.sh`**: This script is designed to safely unmount and detach an Amazon EBS (Elastic Block Store) volume from an EC2 instance. It provides options to ensure that the volume is unmounted, and it offers the flexibility to remove the corresponding entry from /etc/fstab if the mount was permanent, ensuring that the volume does not automatically remount after a reboot.
+
 ## Usage
 
 To use these scripts, follow these steps:
