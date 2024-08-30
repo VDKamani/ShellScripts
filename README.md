@@ -28,6 +28,8 @@ This directory contains shell scripts that I’ve developed for learning and pra
 
 - **`swap_deletion`**: Script to delete the swap that we created and also change the swapiness and catch pressure to defaulte value.
 
+- **`attach_ebs.sh`**: Make an Amazon EBS volume available for use
+
 ## Usage
 
 To use these scripts, follow these steps:
