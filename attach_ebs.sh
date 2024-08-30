@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 # Display block devices and their file systems
@@ -5,13 +6,16 @@ echo "Listing all block devices and their file systems:"
 lsblk -f
 
 # Prompt the user for the device name
-read -p "Enter the device name you want to attach (e.g., /dev/xvdf): " DEVICE
+read -p "Enter the device name you want to attach (e.g., xvdf): " DEVICE
 
-# Check if the device exists
-if ! lsblk | grep -q "$DEVICE"; then
+# Check if the device exists (only checking the name after /dev/)
+if ! lsblk | awk '{print $1}' | grep -q "^$DEVICE$"; then
   echo "Error: The device $DEVICE does not exist."
   exit 1
 fi
+
+# Prepend /dev/ to the device name
+DEVICE="/dev/$DEVICE"
 
 # Get the file system type
 FSTYPE=$(lsblk -no FSTYPE $DEVICE)
