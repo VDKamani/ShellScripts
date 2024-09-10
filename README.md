@@ -1,4 +1,4 @@
-# ShellScripts
+## ShellScripts
 
 Welcome to the ShellScript repository, where I document and share various shell scripting tasks that I work on as part of my learning process. These scripts are designed to automate different processes and tackle various challenges.
 
