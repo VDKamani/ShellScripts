@@ -34,6 +34,10 @@ This directory contains shell scripts that I’ve developed for learning and pra
 
 - **`detache_ebs.sh`**: This script is designed to safely unmount and detach an Amazon EBS (Elastic Block Store) volume from an EC2 instance. It provides options to ensure that the volume is unmounted, and it offers the flexibility to remove the corresponding entry from /etc/fstab if the mount was permanent, ensuring that the volume does not automatically remount after a reboot.
 
+- **`ssh-servers.sh`**:This script provides a list of available servers for SSH access, prompts the user to select a server by entering its number, and then connects to the selected server by executing the corresponding SSH command. It validates the input to ensure a valid server number is chosen. If the input is invalid, it displays an error message indicating the correct range of options.
+
+- **`move_to_s3.sh`**: This script will move all the logfile's gz file created by PM2 logrotate to S3 bucket and will delete that file after successfull uplodation. 
+
 ## Usage
 
 To use these scripts, follow these steps:
