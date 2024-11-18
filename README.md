@@ -43,16 +43,16 @@ This directory contains shell scripts that I’ve developed for learning and pra
 To use these scripts, follow these steps:
 
 1. **Clone the Repository**:
-   git clone https://github.com/VDKamani/ShellScript.git
+   `git clone https://github.com/VDKamani/ShellScript.git`
 
 2. **Navigate to the Directory**:
-   cd ShellScript
+   `cd ShellScript`
 
 3. **Make a Script Executable**:
-   chmod +x <script-name>.sh
+   `chmod +x <script-name>.sh`
 
 4. **Run the Script**:
-   ./<script-name>.sh
+  ` ./<script-name>.sh`
 
 **Replace <script-name> with the specific script you want to run.**
 
